@@ -15,7 +15,7 @@ export default function Home() {
             <div className="text-2xl mb-4">Ease-to-use file sharing app</div>
             <p className="text-slate-400">
               The ultimate solution for seamless and secure file sharing.
-              Whether you're collaborating on a project, sending important
+              Whether you&apos;re collaborating on a project, sending important
               documents, or sharing memories with loved ones, our app is
               designed to make file sharing a breeze.
             </p>
