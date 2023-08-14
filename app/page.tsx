@@ -13,7 +13,7 @@ export default function Home() {
         <div className="flex justify-between gap-2">
           <div className="w-1/2">
             <div className="flex items-center mb-3">
-              <Image src={Logo} alt="Logo" className="w-16 mr-4" />
+              <Image src={Logo} alt="Logo" className="w-14 mr-4" />
               <h1 className="text-5xl text-slate-200">Dropbyte</h1>
             </div>
             <div className="text-2xl mb-4">Easy-to-use file sharing app</div>
