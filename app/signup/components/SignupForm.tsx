@@ -21,9 +21,13 @@ export default function SignupForm() {
     try {
       if (!input.email || !input.password || !input.full_name) return;
       setLoading(true);
-      await axios.post("http://localhost:8080/signup", input, {
-        withCredentials: true,
-      });
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/signup`,
+        input,
+        {
+          withCredentials: true,
+        }
+      );
       router.push("/dashboard/home");
       setLoading(false);
     } catch (err) {

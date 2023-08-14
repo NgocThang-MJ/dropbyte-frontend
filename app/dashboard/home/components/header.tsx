@@ -32,8 +32,8 @@ export default function Header({ accessToken }: Props) {
       setFileName(file.name);
       const formData = new FormData();
       formData.append("file", file);
-      const res = await axios.post(
-        "http://localhost:8080/user/upload",
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/user/upload`,
         formData,
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );

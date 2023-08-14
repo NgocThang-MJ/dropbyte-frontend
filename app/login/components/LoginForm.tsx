@@ -17,9 +17,13 @@ export default function LoginForm() {
     try {
       if (!input.email || !input.password) return;
       setLoading(true);
-      await axios.post("http://localhost:8080/login", input, {
-        withCredentials: true,
-      });
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/login`,
+        input,
+        {
+          withCredentials: true,
+        }
+      );
       router.push("/dashboard/home");
       setLoading(false);
     } catch (err) {

@@ -55,9 +55,14 @@ export default function FileUpload() {
       setIsLoading(true);
       const formData = new FormData();
       formData.append("file", file);
-      const res = await axios.post("http://localhost:8080/upload", formData, {
-        signal: controller.signal,
-      });
+      console.log("server address: ", process.env.NEXT_PUBLIC_SERVER_ADDRESS);
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/upload`,
+        formData,
+        {
+          signal: controller.signal,
+        }
+      );
       setFile(null);
       setIsLoading(false);
       const escapedName = encodeURIComponent(res.data.fileName);
