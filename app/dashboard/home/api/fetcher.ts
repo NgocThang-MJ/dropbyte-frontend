@@ -51,3 +51,16 @@ export async function downloadFile(
   URL.revokeObjectURL(a.href);
   return res.data;
 }
+
+export async function logout(accessToken: string) {
+  const res = await axios.post(
+    `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/user/logout`,
+    {},
+    {
+      headers: { Authorization: `Bearer ${accessToken}` },
+      withCredentials: true,
+    }
+  );
+
+  return res.data;
+}

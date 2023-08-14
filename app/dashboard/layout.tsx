@@ -1,15 +1,21 @@
 import Image from "next/image";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { AiOutlineStar, AiOutlineHome, AiOutlineDelete } from "react-icons/ai";
-import { FaUserCircle } from "react-icons/fa";
 import { IoSettingsOutline, IoNotificationsOutline } from "react-icons/io5";
 
 import Logo from "../../public/logo.png";
+import MenuUser from "./home/components/MenuUser";
 
 export default function DashboardLayout({
   children, // will be a page or nested layout
 }: {
   children: React.ReactNode;
 }) {
+  const cookieStore = cookies();
+  const accessToken = cookieStore.get("access_token");
+  if (!accessToken) return redirect("/login");
+
   return (
     <div className="py-3 px-10 text-slate-200">
       <div className="flex">
@@ -50,7 +56,7 @@ export default function DashboardLayout({
             <div className="flex items-center">
               <IoNotificationsOutline className="h-7 w-7 cursor-pointer text-slate-300 mr-3.5" />
               <IoSettingsOutline className="h-7 w-7 cursor-pointer text-slate-300 mr-6" />
-              <FaUserCircle className="h-10 w-10 cursor-pointer text-slate-300" />
+              <MenuUser accessToken={accessToken.value} />
             </div>
           </div>
 
