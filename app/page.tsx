@@ -3,6 +3,7 @@ import Image from "next/image";
 import Upload from "../public/upload.png";
 import Drop from "../public/drop.png";
 import Share from "../public/share.png";
+import Logo from "../public/logo.png";
 import FileUpload from "./components/FileUpload";
 
 export default function Home() {
@@ -11,7 +12,10 @@ export default function Home() {
       <div className="max-w-screen-lg mx-auto mt-48">
         <div className="flex justify-between gap-2">
           <div className="w-1/2">
-            <h1 className="text-5xl text-slate-200 mb-5">Dropbyte</h1>
+            <div className="flex items-center mb-3">
+              <Image src={Logo} alt="Logo" className="w-16 mr-4" />
+              <h1 className="text-5xl text-slate-200">Dropbyte</h1>
+            </div>
             <div className="text-2xl mb-4">Easy-to-use file sharing app</div>
             <p className="text-slate-400">
               The ultimate solution for seamless and secure file sharing.
