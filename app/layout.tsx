@@ -5,8 +5,15 @@ import { Lato } from "next/font/google";
 const inter = Lato({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "Dropbyte",
-  description: "Simple file sharing app",
+  title: "Dropbyte - Simple file sharing app",
+  description:
+    "Effortless File Sharing: Upload, Store and Share with Ease | Dropbyte",
+  authors: { name: "Liquiddev99", url: "https://github.com/liquiddev99" },
+  openGraph: {
+    title: "Dropbyte - Simple file sharing app",
+    description:
+      "Effortless File Sharing: Upload, Store and Share with Ease | Dropbyte",
+  },
 };
 
 export default function RootLayout({
