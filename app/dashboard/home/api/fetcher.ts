@@ -2,9 +2,12 @@ import axios from "axios";
 import { IFile } from "../types/types";
 
 export async function getFiles(accessToken: string): Promise<IFile[]> {
-  const res = await axios.get("http://localhost:8080/user/files", {
-    headers: { Authorization: `Bearer ${accessToken}` },
-  });
+  const res = await axios.get(
+    `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/user/files`,
+    {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    }
+  );
 
   return res.data;
 }
@@ -15,7 +18,7 @@ export async function deleteFile(
   accessToken: string
 ) {
   const res = await axios.post(
-    "http://localhost:8080/user/file/delete",
+    `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/user/file/delete`,
     {
       file_name: fileName,
       file_id: fileId,
@@ -32,7 +35,7 @@ export async function downloadFile(
   accessToken: string
 ) {
   const res = await axios.get(
-    `http://localhost:8080/user/file/download?file_id=${fileId}`,
+    `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/user/file/download?file_id=${fileId}`,
     {
       headers: { Authorization: `Bearer ${accessToken}` },
       responseType: "blob",
