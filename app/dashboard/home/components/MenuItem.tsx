@@ -47,7 +47,9 @@ export default function MenuItem({ fileName, fileId, accessToken }: Props) {
           <div className="px-1 py-1 ">
             <Menu.Item>
               <a
-                href={`https://f005.backblazeb2.com/file/liquiddev99/${fileName}`}
+                href={`https://f005.backblazeb2.com/file/liquiddev99/${encodeURIComponent(
+                  fileName
+                )}`}
                 target="_blank"
                 className="text-slate-200 hover:bg-slate-500 group flex w-full items-center rounded-md px-2 py-2 text-sm"
               >
