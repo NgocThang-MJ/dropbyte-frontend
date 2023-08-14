@@ -55,7 +55,6 @@ export default function FileUpload() {
       setIsLoading(true);
       const formData = new FormData();
       formData.append("file", file);
-      console.log("server address: ", process.env.NEXT_PUBLIC_SERVER_ADDRESS);
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_SERVER_ADDRESS}/upload`,
         formData,

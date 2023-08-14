@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex justify-between gap-2">
           <div className="w-1/2">
             <h1 className="text-5xl text-slate-200 mb-5">Dropbyte</h1>
-            <div className="text-2xl mb-4">Ease-to-use file sharing app</div>
+            <div className="text-2xl mb-4">Easy-to-use file sharing app</div>
             <p className="text-slate-400">
               The ultimate solution for seamless and secure file sharing.
               Whether you&apos;re collaborating on a project, sending important
