@@ -15,7 +15,7 @@ export default function DashboardLayout({
       <div className="flex">
         <div className="sideBar pr-5">
           <div className="flex items-center h-20 pb-2 relative pr-10">
-            <Image src={Logo} alt="Logo" width={50} />
+            <Image src={Logo} alt="Logo" width={43} />
             <p className="ml-2 text-3xl text-slate-200">Dropbyte</p>
             <div className="absolute bottom-0 w-screen h-[1px] bg-slate-600 -left-10"></div>
             <div className="absolute right-0 h-screen w-[1px] bg-slate-600 -top-4"></div>
