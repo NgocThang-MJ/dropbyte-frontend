@@ -9,11 +9,11 @@ import FileUpload from "./components/FileUpload";
 export default function Home() {
   return (
     <div className="max-w-screen-xl mx-auto text-slate-300">
-      <div className="max-w-screen-lg mx-auto mt-48">
-        <div className="flex justify-between gap-2">
-          <div className="w-1/2">
+      <div className="px-6 sm:px-10 lg:px-24 xl:px-28 mx-auto mt-10 md:mt-48">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="w-full sm:w-2/3 lg:w-1/2">
             <div className="flex items-center mb-3">
-              <Image src={Logo} alt="Logo" className="w-14 mr-4" />
+              <Image src={Logo} alt="Logo" width={50} className="mr-4" />
               <h1 className="text-5xl text-slate-200">Dropbyte</h1>
             </div>
             <div className="text-2xl mb-4">Easy-to-use file sharing app</div>

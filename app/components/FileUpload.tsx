@@ -80,7 +80,7 @@ export default function FileUpload() {
   }
 
   return (
-    <div className="w-1/2 h-96 border border-slate-900 rounded-lg shadow-2xl flex justify-center">
+    <div className="w-full sm:w-2/3 lg:w-1/2 h-72 sm:h-96 border border-slate-900 rounded-lg shadow-2xl flex justify-center mb-10 lg:mb-0">
       {isSuccess ? (
         <div className="flex flex-col items-center w-5/6">
           <Lottie
@@ -120,7 +120,7 @@ export default function FileUpload() {
         </div>
       ) : (
         <div
-          className={`w-full h-full border border-slate-500 border-dashed rounded-lg cursor-pointer transition${
+          className={`w-full h-full border border-slate-500 border-dashed rounded-lg cursor-pointer transition flex items-center justify-center${
             isDragOver ? " scale-90" : " scale-[0.85]"
           }`}
           onDragOver={handleDragOver}
@@ -134,7 +134,7 @@ export default function FileUpload() {
             ref={inputRef}
             onChange={handleChange}
           />
-          <div className="mt-16 text-center flex flex-col items-center">
+          <div className="text-center flex flex-col items-center">
             <div className="mb-4">
               {!file && (
                 <AiFillFileAdd className="h-32 w-28 mx-auto text-slate-300" />
